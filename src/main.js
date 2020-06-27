@@ -4,9 +4,17 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+import { request } from './network/request.js'
+
 new Vue({
-  el: '#app',
-  router,
-  render: h => h(App)
-})
+        el: '#app',
+        router,
+        render: h => h(App)
+    })
+    // request({
+    //     url: '/home/multidata'
+    // }).then(res => {
+    //     console.log(res)
+    // }).catch(err => {
+    //     console.log(err)
+    // })
